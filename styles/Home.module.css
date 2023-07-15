@@ -233,13 +233,23 @@
 .mainVav ul {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  padding: 30px;
 
 }
 
 .mainVav ul li {
-  list-style: none;
+  
   font-weight: bold;
   margin: 0 24px;
+  list-style-type: none;
 
 }
+.mainVav ul li a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.myImg{
+  border-radius: 10px;
+}
+

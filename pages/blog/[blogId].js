@@ -1,8 +1,14 @@
 import Head from "next/head"
+import { useRouter } from "next/router"
 
-export default function Blog({title,description}) {
+export default function blog({title,description}) {
+
+
+  const router = useRouter()
+  const {blogId} = router.query
   return (
     <>
+     <div>{blogId}</div>
     <Head>
         <title>{title}</title>
         <meta name='description' content={description}/>

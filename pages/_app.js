@@ -3,12 +3,15 @@ import Footer from '@/components/Footer'
 import Header from '@/components/header'
 // import '@/styles/globals.css' 
 import '../styles/layout.css'
+// import '../styles/style.css'
+
 
 export default function App({ Component, pageProps }) {
-  if(Component.getLayout){
-    return Component.getLayout(<Component {...pageProps}/>)
-   }
+  // if(Component.getLayout){
+  //   return Component.getLayout(<Component {...pageProps}/>)
+  //  }
   
+  // upore getlayout ei beparta jana lagbe eta bujhi nai 
  
   return(
     <>
