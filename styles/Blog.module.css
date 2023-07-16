@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-start; 
+    padding-top: 3rem;
+  }
+
+
+
+.myImg{
+    border-radius: 10px;
+  }
+
+  .blogItemh3{
+    cursor: pointer;
+  }

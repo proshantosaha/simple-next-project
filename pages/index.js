@@ -41,22 +41,7 @@ export default function Home() {
           <Image className={styles.myImg} src="/2.jpg" width={237} height={158}/>
         <p> this site blogging site proshanto </p>
 
-        <div className='blogs'>
-
-          <h2> Popular Blogs</h2>
-          <div className='blogItem'>
-            <h3>  proshnto blogs</h3>
-            <p> this  page your welcome</p>
-          </div>
-          <div className='blogItem'>
-            <h3>  proshnto blogs</h3>
-            <p> this  page your welcome</p>
-          </div>
-          <div className='blogItem'>
-            <h3>  proshnto blogs</h3>
-            <p> this  page your welcome</p>
-          </div>
-        </div>
+        
 
       </main>
     </div>
