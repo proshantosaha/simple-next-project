@@ -4,14 +4,14 @@ import * as fs from 'node:fs';
 export default async function handler(req, res) {
 
 
-
+ 
   let data = await fs.promises.readdir("blogdata");
   let myfile;
   let allBlogs = [];
-  for (let index = 0; index < data.length; index++){
+  for (let index = 0; index < data.length; index++) {
     const item = data[index];
     console.log(item)
-    myfile = await fs.promises.readFile(('blogdata/' + item ), 'utf-8')
+    myfile = await fs.promises.readFile(('blogdata/' + item), 'utf-8')
     allBlogs.push(JSON.parse(myfile))
 
   }
@@ -25,9 +25,8 @@ export default async function handler(req, res) {
 
 
   //   })
-  
+
   // })
 
-  
-  }
-  
+
+}
