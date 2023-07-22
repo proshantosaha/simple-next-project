@@ -70,29 +70,30 @@ const Contact = () => {
 
 
     <div className={styles.container}>
-      <div>contact us</div>
+      <h2>contact us</h2>
       <form onSubmit={handleSubmit   }>
         <div className={styles.mb3}>
           <label htmlFor="name" className={styles.formlabel}>Name</label>
-          <input type="text" value={name} onChange={handleChange} className={styles.formcontrol} id="name" name="name" />
+          <input className={styles.input} type="text" value={name} onChange={handleChange} id="name" name="name" />
         </div>
         <div className={styles.mb3}>
           <label htmlFor="email" className={styles.formlabel}>Email address</label>
-          <input type="email" value={email} onChange={handleChange} className={styles.formcontrol} id="email" name="email" />
+          <input className={styles.input} type="email" value={email} onChange={handleChange} id="email" name="email" />
+          <div id='emailHelp' className={styles.fromtext}>we'll never share your email with anyone else</div>
         </div>
         <div className={styles.mb3}>
           <label htmlFor="phone" className={styles.formlabel}>Password</label>
-          <input type="phone" value={phone} onChange={handleChange} className={styles.formcontrol} id="phone" name="phone" />
+          <input  type="phone" value={phone} onChange={handleChange}  id="phone" name="phone" />
         </div>
 
 
         <div className={styles.mb3}>
-          <label htmlFor="desc">Comments</label>
-          <textarea value={desc} className={styles.formcontrol} name='desc' onChange={handleChange} placeholder="comment here" id="desc"></textarea>
+          <label  className={styles.formlabel} htmlFor="desc">Comments</label>
+          <textarea className={styles.input} value={desc} name='desc' onChange={handleChange}  id="desc"></textarea>
         </div>
 
 
-        <button type="submit" className={styles.btnprimary}>Submit</button>
+        <button type="submit" className={styles.btn}>Submit</button>
       </form>
     </div>
   )

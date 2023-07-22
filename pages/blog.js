@@ -18,6 +18,8 @@ export default function Blog(props) {
            
               <h3 className={styles.blogItemh3}>{blogitem.title}</h3></Link>
             <p className={styles.blogItem}> {blogitem.content.substr(0, 400)}</p>
+            <Link legacyBehavior href={`/blog/${blogitem.slug}`}><button className={styles.btn}>Read More</button></Link>
+
           </div>
         })}
       </main>
