@@ -2,20 +2,32 @@ import React, { useEffect, useState } from 'react'
 import styles from '@/styles/Blog.module.css'
 import Link from 'next/link'
 import * as fs from 'node:fs';
+import InfiniteScroll from 'react-infinite-scroll-component';
+
 
 
 
 export default function Blog(props) {
   console.log(props);
   const [blogs, setBlogs] = useState(props.allBlogs)
+
+
+
+
+
   return (
     <div className={styles.container}>
-      <main className={styles.main}>   
+      <main className={styles.main}>
+
+       
+
+
+
 
         {blogs.map((blogitem) => {
           return <div key={blogitem.slug}>
             <Link legacyBehavior href={`/blog/${blogitem.slug}`}>
-           
+
               <h3 className={styles.blogItemh3}>{blogitem.title}</h3></Link>
             <p className={styles.blogItem}> {blogitem.content.substr(0, 400)}</p>
             <Link legacyBehavior href={`/blog/${blogitem.slug}`}><button className={styles.btn}>Read More</button></Link>
@@ -39,7 +51,7 @@ export default function Blog(props) {
 //   }
 // }
 
-export async function getStaticProps(context){
+export async function getStaticProps(context) {
   let data = await fs.promises.readdir("blogdata");
   let myfile;
   let allBlogs = [];
@@ -52,7 +64,7 @@ export async function getStaticProps(context){
   }
 
   return {
-    props:{allBlogs},
+    props: { allBlogs },
 
   }
 }

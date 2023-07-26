@@ -21,11 +21,11 @@ export default function App({ Component, pageProps }) {
        
     
       </Head>
-    <Header/>
+    <Header/> 
      <Component {...pageProps} />
      <Footer/>
     
-    </>
+    </> 
 
   )
 }
